@@ -1,7 +1,8 @@
 # Docker container with RabbitMQ
 
-How to executing with docker compose
+### How to execute with docker compose
 
+You should create a file named "docker-compose.yml" with the following content:
 ```
 version: '3'
 
@@ -10,6 +11,7 @@ services:
     image: hersonpc/rabbitmq
     hostname: mq
     ports:
+      - "5672:5672"
       - "15672:15672"
       - "61613:61613"
     network_mode: "bridge"

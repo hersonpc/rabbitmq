@@ -13,6 +13,6 @@ RUN chmod +x /app/init.sh
 
 WORKDIR /app
 
-EXPOSE 15671 15672 15674 61613
+EXPOSE 5672 15671 15672 15674 61613
 
 CMD [ "/app/init.sh" ]
