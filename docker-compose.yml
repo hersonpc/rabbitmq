@@ -5,13 +5,14 @@ services:
     image: hersonpc/rabbitmq
     hostname: mq
     ports:
-      - "7000:15672"
+      - "5672:5672"
+      - "15672:15672"
       - "61613:61613"
     network_mode: "bridge"
     environment:
      - RABBITMQ_ERLANG_COOKIE=811bdf44dc6741a
-     - RABBITMQ_DEFAULT_USER=mqadmin
-     - RABBITMQ_DEFAULT_PASS=isgtecnologia_
+     - RABBITMQ_ADMIN_USER=mqadmin
+     - RABBITMQ_ADMIN_PASS=isgtecnologia_
      - RABBITMQ_USER=guest
-     - RABBITMQ_PASSWORD=087we654zdf3218
+     - RABBITMQ_PASSWORD=guest
      - CLUSTERED=true
